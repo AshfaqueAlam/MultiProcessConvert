@@ -1,0 +1,5 @@
+test_files/
+output/
+env/
+.env
+__pycache__/
