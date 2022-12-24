@@ -61,7 +61,7 @@ from multiprocessing import Process as multiProcess, Manager
 
 def multi_convert(file_path : str, output_pdf_paths_list : str) -> bool:
     status = False
-    output_pdf_path = os.path.join(output_dir_path, (os.path.splitext(file_path)[0]).split('/')[-1]+'.pdf' if '/' in file_path else (os.path.splittext(file_path)[0]).split('/')[-1]+'.pdf')
+    output_pdf_path = os.path.join(output_dir_path, (os.path.splitext(file_path)[0]).split('\\')[-1]+'.pdf' if '\\' in file_path else (os.path.splitext(file_path)[0]).split('/')[-1]+'.pdf')
     extension = os.path.splitext(file_path)[-1].lower()
 
     if extension in ('.pdf'):
